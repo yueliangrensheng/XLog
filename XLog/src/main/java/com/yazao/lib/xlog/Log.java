@@ -1,7 +1,6 @@
 package com.yazao.lib.xlog;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,7 +12,7 @@ import org.json.JSONObject;
  * <p/>
  * Created by shaopingzhai on 15/12/9.
  */
-public class XLog {
+public class Log {
 
 	/**
 	 * Android's max limit for a log entry is ~4076 bytes,
@@ -65,7 +64,7 @@ public class XLog {
 	private static String TAG = "yazao";
 
 	//no instance
-	private XLog() {
+	private Log() {
 	}
 
 	/**
@@ -89,7 +88,7 @@ public class XLog {
 		if (tag.trim().length() == 0) {
 			throw new IllegalStateException("tag may not be empty");
 		}
-		XLog.TAG = tag;
+		Log.TAG = tag;
 		return settings;
 	}
 
@@ -427,7 +426,7 @@ public class XLog {
 	private static int getStackOffset(StackTraceElement[] trace) {
 		for (int i = MIN_STACK_OFFSET; i < trace.length; i++) {
 			StackTraceElement e = trace[i];
-			if (!e.getClassName().equals(Log.class.getName())) {
+			if (!e.getClassName().equals(android.util.Log.class.getName())) {
 				return --i;
 			}
 		}
