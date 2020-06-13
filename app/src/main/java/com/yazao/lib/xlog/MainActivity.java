@@ -14,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Log日志
-        XLog.init().setLogLevel(BuildConfig.DEBUG ? XLog.LogLevel.FULL : XLog.LogLevel.NONE).setMethodCount(2).hideThreadInfo();
+        Log.init().setLogLevel(BuildConfig.DEBUG ? Log.LogLevel.FULL : Log.LogLevel.NONE).setMethodCount(2).hideThreadInfo();
 
 
 
-        XLog.i("i am a log");
+        Log.i("i am a log");
     }
 }

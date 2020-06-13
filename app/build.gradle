@@ -30,5 +30,5 @@ dependencies {
 
 
 //    api project(':XLog')
-    implementation 'com.yazao:xlog:1.0.0'
+    implementation 'com.yazao:xlog:1.0.1'
 }
