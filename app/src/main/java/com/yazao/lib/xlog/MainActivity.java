@@ -14,10 +14,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Log日志
-        Log.init().setLogLevel(BuildConfig.DEBUG ? Log.LogLevel.FULL : Log.LogLevel.NONE).setMethodCount(2).hideThreadInfo();
+        Log.init()
+                .setLogLevel(BuildConfig.DEBUG ? Log.LogLevel.FULL : Log.LogLevel.NONE)//配置显示log与否
+                .setMethodCount(2)//显示方法调用层级数量
+                .hideThreadInfo()//隐藏线程信息
+        ;
 
 
-
+        //example
         Log.i("i am a log");
     }
 }
