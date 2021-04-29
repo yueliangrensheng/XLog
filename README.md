@@ -1,7 +1,7 @@
 # XLog
 > a Android Log lib
 
-# how to use
+## how to use
 
 1. app/build.gradle 配置如下：
    
